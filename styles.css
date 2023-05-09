@@ -1,0 +1,120 @@
+body {
+  width  : 100vw;
+  height : 100vh;
+  margin : 0;
+}
+
+ul,
+li {
+  margin     : 0;
+  padding    : 0;
+  list-style : none;
+}
+
+ul {
+  display  : flex;
+  overflow : hidden;
+  height   : 100vh;
+  width    : 100vw;
+}
+
+li {
+  overflow-y         : scroll;
+  overflow           : auto;
+  -webkit-box-flex   : 1;
+  -webkit-flex       : 1;
+  -ms-flex           : 1;
+  flex               : 1;
+  height             : 100vh;
+  -webkit-transition : -webkit-box-flex 500ms ease-out;
+  -webkit-transition : -webkit-flex 500ms ease-out;
+  transition         : -webkit-box-flex 500ms ease-out;
+  transition         : -ms-flex 500ms ease-out;
+  transition         : flex 500ms ease-out;
+  padding            : 20px;
+  -webkit-box-shadow : 2px 0px 4px -1px rgba(0, 0, 0, 0.66);
+  -moz-box-shadow    : 2px 0px 4px -1px rgba(0, 0, 0, 0.66);
+  box-shadow         : 2px 0px 4px -1px rgba(0, 0, 0, 0.66);
+}
+
+ul#vertical-accordion:not(:hover) li.selected,
+li:hover {
+  -webkit-box-flex : 50vw;
+  -webkit-flex     : 50vw;
+  -ms-flex         : 50vw;
+  flex             : 50vw;
+}
+
+.projects{
+  width           : 50vw;
+  height          : 100vh;
+  display         : flex;
+  flex-direction  : row;
+  margin-bottom   : 5vh;
+}
+
+#split-left{
+  width                               : 50%;
+  height                              : auto;
+  /* scroll animation */ 
+  -webkit-animation-name              : move;
+  -webkit-animation-duration          : 8s;
+  -webkit-animation-iteration-count   : infinite;
+  -webkit-animation-direction         : up;
+  -webkit-animation-timing-function   :linear;
+}
+
+ #split-left:hover {
+  -webkit-animation-play-state  : paused;
+}
+
+
+@-webkit-keyframes move {
+  0% {
+     transform:translateY(0);
+  }
+  100% {
+     transform:translateY(-100%);
+  }
+}*/
+
+#split-right{
+  width: 50%;
+}
+
+/* ------- PARAGRAPH STYLES ------- */
+
+a {
+  text-decoration : none;
+  color           : black;
+}
+
+a:hover {
+  opacity : 0.5;
+}
+
+.maintitle {
+  width          : 100%;
+  font-size      : 35px;
+  text-transform : uppercase;
+  font-family    : Arial, Helvetica, sans-serif;
+}
+
+.subtitle {
+  width       : 100%;
+  font-size   : 25px;
+  font-family : Arial, Helvetica, sans-serif;
+}
+
+img{
+  width   : 100%;
+  padding-top: 20px;
+  height  : auto;
+}
+  
+.sinopsis{
+  position     : relative;
+  font-family  : Arial, Helvetica, sans-serif;
+  font-size    : 15px;
+  padding-left : 20px;
+}
